@@ -1,0 +1,3 @@
+const menu=document.querySelector('.menu');const nav=document.querySelector('.nav');menu?.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.nav nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('contactForm')?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.target);const msg=`Olá, Junior Mendes! Meu nome é ${d.get('nome')}. Tenho interesse em ${d.get('servico')}. ${d.get('mensagem')||''}`;const el=document.getElementById('formMsg');el.textContent='Solicitação preparada. Para ativar o envio direto para WhatsApp/e-mail, configure seus contatos no arquivo script.js.';el.style.color='#0a8bd8';console.log(msg);});
